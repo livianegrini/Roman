@@ -1,5 +1,5 @@
-# Roman
-O Roman é um projeto que consiste em um sistena de sugestões de projetos entre professores, com descrição e temática.
+# Projeto Roman
+O Roman é um projeto que consiste em um sistema de sugestões de projetos entre professores, com descrição e temática.
 
 # Clonar Repositório do Github
 Para clonar o repostirório do GitHub você precisara verficiar se a instalação do git foi feita, e se tudo estiver certo você exacutara o seguinte comando no terminal do Git:
@@ -124,7 +124,7 @@ O projeto será aberto junto do Android Studio (Verifique se já esta instalado)
 </tr>
 <tr>
   <td>Gabriele Brito</td>
-  <td></td>
+  <td>Gabriele-Brito</td>
 </tr>
 <tr>
   <td>Leonardo Souza</td>
