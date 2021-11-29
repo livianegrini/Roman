@@ -2,7 +2,7 @@
 O Roman é um projeto que consiste em um sistema de sugestões de projetos entre professores, com descrição e temática.
 
 # Clonar Repositório do Github
-Para clonar o repostirório do GitHub você precisara verficiar se a instalação do git foi feita, e se tudo estiver certo você exacutara o seguinte comando no terminal do Git:
+Para clonar o repostirório do GitHub você precisara verificar se a instalação do git foi feita, e se tudo estiver certo você exacutará o seguinte comando no terminal do Git:
 `git clone http://github.com/livianegrini/Roman`
 
 # Criar o Banco de Dados
