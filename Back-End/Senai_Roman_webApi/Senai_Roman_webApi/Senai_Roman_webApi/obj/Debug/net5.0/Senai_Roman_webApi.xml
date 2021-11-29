@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Senai_Roman_webApi</name>
+    </assembly>
+    <members>
+        <member name="M:Senai_Roman_webApi.Controllers.LoginController.Login(Senai_Roman_webApi.ViewModel.LoginViewModel)">
+            <summary>
+            Método responsavel por fazer login no sistema
+            </summary>
+            <param name="Login">Objeto do tipo Login com Email e Senha</param>
+            <returns>Usuario com esse email e senha</returns>
+        </member>
+        <member name="M:Senai_Roman_webApi.Controllers.ProjetosController.Listar">
+            <summary>
+            Listar todas as Consultas
+            </summary>
+            <returns>Uma lista de Consultas</returns>
+        </member>
+        <member name="M:Senai_Roman_webApi.Controllers.ProjetosController.Cadastar(Senai_Roman_webApi.Domains.Projeto)">
+            <summary>
+            Cadastrar uma nova Consulta
+            </summary>
+            <param name="ProjetoNovo">Dados a serem cadastrados</param>
+        </member>
+        <member name="M:Senai_Roman_webApi.Interfaces.IProjetoRepository.Listar">
+            <summary>
+            Listar todas as Consultas
+            </summary>
+            <returns>Uma lista de Consultas</returns>
+        </member>
+        <member name="M:Senai_Roman_webApi.Interfaces.IProjetoRepository.Cadastrar(Senai_Roman_webApi.Domains.Projeto)">
+            <summary>
+            Cadastrar uma nova Consulta
+            </summary>
+            <param name="ProjetoNovo">Dados a serem cadastrados</param>
+        </member>
+        <member name="M:Senai_Roman_webApi.Interfaces.IUsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Método responsavel por fazer login no sistema
+            </summary>
+            <param name="Email">Email para login</param>
+            <param name="Senha">Senha para login</param>
+            <returns>Usuario com esse email e senha</returns>
+        </member>
+    </members>
+</doc>
