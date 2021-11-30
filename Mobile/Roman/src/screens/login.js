@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import { Component } from 'react';
 import {
   StyleSheet,
   Text,
@@ -45,6 +45,7 @@ export default class Login extends Component{
                 // ENVENTO PARA FAZERMOS ALGO ENQUANTO O TEXTO MUDA
                 onChangeText={email => this.setState({email})}
               />
+              <Text>Teste</Text>
             </View>
         )
     }

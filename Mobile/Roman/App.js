@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -9,6 +9,7 @@ import {StatusBar, StyleSheet} from 'react-native';
 
 import Main from './src/screens/main';
 import Login from './src/screens/login';
+import ListarProjetos from './src/screens/listarprojetos';
 // import CameraPerfil from './src/screens/camera';
 
 const AuthStack = createStackNavigator();
@@ -21,11 +22,13 @@ class App extends Component {
           hidden={true}
         />
         <AuthStack.Navigator
+          initialRouteName='ListarProjetos'
           screenOptions={{
             headerShown: false,
           }}>
           <AuthStack.Screen name="Login" component={Login} />
           <AuthStack.Screen name="Main" component={Main} />
+          <AuthStack.Screen name="ListarProjetos" component={ListarProjetos} />
           {/* <AuthStack.Screen name="Camera" component={CameraPerfil} /> */}
         </AuthStack.Navigator>
       </NavigationContainer>
