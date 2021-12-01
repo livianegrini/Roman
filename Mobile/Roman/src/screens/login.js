@@ -16,8 +16,8 @@ export default class Login extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            Email : "",
-            Senha : ""
+            Email : "lucas@lucas.com",
+            Senha : "123"
         }
     }
 
@@ -33,7 +33,7 @@ export default class Login extends Component{
         console.warn(this.state.Email, this.state.Senha)
     
         if (resposta.status === 200) {
-          this.props.navigation.navigate('Cadastrar');
+          this.props.navigation.navigate('ListarProjetos');
         }
       };
 
