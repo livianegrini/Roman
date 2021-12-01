@@ -44,7 +44,7 @@ export default class Cadastrar extends Component {
                 // style={styles.ImgCadastrar} 
                 />
                 <View style={styles.Box_Form}>
-                    <View>
+                    <View style={styles.Box_Titulo}>
                         <Text>Novo Projeto</Text>
                     </View>
                     <TextInput
@@ -105,5 +105,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 10
+    },
+
+    Box_Titulo:{
+        backgroundColor:'#494F8F',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: 346,
+        height: 69
     }
 })
