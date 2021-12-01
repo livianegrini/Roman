@@ -5,7 +5,6 @@ import {
   TouchableOpacity,
   View,
   Image,
-  ImageBackground,
   TextInput,
 } from 'react-native';
 
@@ -17,22 +16,26 @@ export default class Login extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            email : "",
-            senha : ""
+            Email : "",
+            Senha : ""
         }
     }
 
     RealizarLogin = async () => {
         const resposta = await api.post('/Login',{
-            email: this.state.email,
-            senha: this.state.senha,
+            Email: this.state.Email,
+            Senha: this.state.Senha,
         });
 
         const token = resposta.data.token;
         await AsyncStorage.setItem('user-token', token);
-        // console.warn(token)
-        // console.warn(this.state.email, this.state.senha)
-    };
+        console.warn(token)
+        console.warn(this.state.Email, this.state.Senha)
+    
+        if (resposta.status === 200) {
+          this.props.navigation.navigate('Cadastrar');
+        }
+      };
 
 
     render(){
@@ -49,7 +52,7 @@ export default class Login extends Component{
                 style={styles.Inputlogin}
                 placeholder="Email"
                 keyboardType="email-address"
-                onChangeText={email => this.setState({email})}
+                onChangeText={Email => this.setState({Email})}
                 ></TextInput>
                 
                 <TextInput 
@@ -57,7 +60,7 @@ export default class Login extends Component{
                 placeholder="Senha"
                 keyboardType="default"
                 secureTextEntry={true}
-                onChangeText={senha => this.setState({senha})}
+                onChangeText={Senha => this.setState({Senha})}
                 ></TextInput>
 
                 <TouchableOpacity
@@ -71,7 +74,7 @@ export default class Login extends Component{
                 style={styles.Inputlogin}
                 placeholder="Email"
                 placeholderTextColor="#000"
-                keyboardType="email-address"
+                keyboardType="Email-address"
                 onChangeText={Email => this.setState({Email})}
               />
                 <TextInput
@@ -135,7 +138,7 @@ const styles = StyleSheet.create({
     Boxform:{
         alignItems: 'center',
         justifyContent: 'space-evenly',
-        height: 250
+        flex: 0.5
     },
   });
   
