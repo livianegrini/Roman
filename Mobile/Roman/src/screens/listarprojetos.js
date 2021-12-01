@@ -51,26 +51,34 @@ export default class Projetos extends Component {
     render() {
         return (
 
-            <View style={styles.Container}>
-                <Text style={styles.Titulo}>
-                    {'Projetos'.toUpperCase()}
-                </Text>
+            <View style={styles.Fundo}>
+                <View style={styles.Container}>
+                    <View style={styles.Box_tiutlo}>
+                        <Text style={styles.Titulo}>
+                            {'Projetos'.toUpperCase()}
+                        </Text>
+                    </View>
 
-                <View>
-                    <Text style={styles.Listagem}>
-                        {'Nome do Projeto'.toUpperCase()}
-                    </Text>
-                    <Text style={styles.Listagem}>
-                        {'Tema do Projeto'.toUpperCase()}
-                    </Text>
-                    <Text style={styles.Listagem}>
-                        {'Descrição:'.toUpperCase()}
-                    </Text>
-                    <Text style={styles.Listagem}>
-                        {'Exemplo'.toUpperCase()}
-                    </Text>
+                    <View style={styles.ListarDiv}>
+                        <View style={styles.Box_Projeto}>
+                            <Text style={styles.ListagemNome}>
+                                {'Nome do Projeto'.toUpperCase()}
+                            </Text>
+                        </View>
+
+
+                        <Text style={styles.ListagemTema}>
+                            {'Tema do Projeto'.toUpperCase()}
+                        </Text>
+                        <Text style={styles.ListagemDescricao}>
+                            {'Descrição:'.toUpperCase()}
+                        </Text>
+                        <Text style={styles.ListagemExemplo}>
+                            {'Exemplo'.toUpperCase()}
+                        </Text>
+
+                    </View>
                 </View>
-
             </View>
 
         );
@@ -79,10 +87,17 @@ export default class Projetos extends Component {
 
 const styles = StyleSheet.create({
 
+    Box_tiutlo: {
+        alignItems: 'center'
+    },
+
+    Fundo: {
+        flex: 1,
+        backgroundColor: '#E0EDF5'
+    },
 
     Container: {
         flex: 1,
-        backgroundColor: '#E0EDF5',
         marginLeft: 35,
         marginRight: 35
     },
@@ -92,15 +107,60 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 30,
         marginTop: 36,
-        borderColor: 'black',
-        alignItems: 'center'
+        borderBottomColor: 'black',
+        borderBottomWidth: 2
     },
 
     Listagem: {
         color: 'black',
         borderColor: '#494F8F',
+        fontWeight: 'bold'
+    },
 
-    }
+    Box_Projeto: {
+        alignItems: 'flex-end',
+        // backgroundColor
+        backgroundColor: '#494F8F'
+    },
+
+    ListagemNome: {
+        color: 'white',
+        fontWeight: 'bold',
+        fontSize: 18,
+        marginRight: 8,
+        margin: 3
+    },
+
+    ListagemTema: {
+        color: 'black',
+        fontWeight: 'bold',
+        fontSize: 18,
+        marginLeft: 8,
+        marginTop: 8
+    },
+
+    ListagemDescricao: {
+        color: 'black',
+        fontWeight: 'bold',
+        fontSize: 14,
+        marginLeft: 8,
+        marginTop: 18
+    },
+
+    ListagemExemplo: {
+        color: 'black',
+        marginLeft: 10,
+        fontSize: 12,
+        marginBottom: 32
+    },
+
+    ListarDiv: {
+        borderColor: '#494F8F',
+        borderWidth: 3,
+        borderRadius: 10,
+        marginTop: 20
+        // alignItems: 'flex-end'
+    },
 
 })
 
