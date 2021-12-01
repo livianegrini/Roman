@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React ,{ Component } from 'react'
 import {
   StyleSheet,
   Text,
@@ -47,7 +47,7 @@ export default class Login extends Component{
               />
               <Text>Teste</Text>
             </View>
-        )
+        );
     }
 
 }

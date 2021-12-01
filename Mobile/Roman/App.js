@@ -22,7 +22,7 @@ class App extends Component {
           hidden={true}
         />
         <AuthStack.Navigator
-          initialRouteName='ListarProjetos'
+          initialRouteName='Login'
           screenOptions={{
             headerShown: false,
           }}>

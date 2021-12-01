@@ -16,7 +16,7 @@ export default class Projetos extends Component {
 
         try {
 
-            const Token = await AsyncStorage.getItem('Usuario-Token')
+            const Token = await AsyncStorage.getItem('user-token')
 
             // Definindo uma constante pra receber a resposta da requisição.
             const Resposta = await api.get('/Projetos', {
