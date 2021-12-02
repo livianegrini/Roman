@@ -42,6 +42,7 @@ GO
 --Criação Tabela Projeto
 CREATE TABLE Projeto(
 IdProjeto INT PRIMARY KEY IDENTITY(1,1),
+IdUsuario INT FOREIGN KEY REFERENCES Usuario(IdUsuario),
 NomeProjeto VARCHAR(30) NOT NULL,
 Descricao TEXT NOT NULL,
 IdTema INT FOREIGN KEY REFERENCES Tema(IdTema)

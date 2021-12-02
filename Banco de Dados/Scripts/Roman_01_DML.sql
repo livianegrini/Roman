@@ -34,7 +34,9 @@ INSERT INTO Tema(NomeTema,[Status])
 VALUES ('Gestão',1),('HQs',1),('C#',0)
 SELECT * FROM Tema
 
+
+SELECT * FROM Usuario
 --Inserindo Valores na Tabela Projeto e Selecionando para Visualização.
-INSERT INTO Projeto(NomeProjeto,Descricao,IdTema)
-VALUES ('Controle de Estoque','Projeto sobre controle de estoque',1),('Listagem de Personagens','Projeto sobre listagem de personagens',2)
+INSERT INTO Projeto(IdUsuario,NomeProjeto,Descricao,IdTema)
+VALUES (1,'Controle de Estoque','Projeto sobre controle de estoque',1),(2,'Listagem de Personagens','Projeto sobre listagem de personagens',2)
 SELECT * FROM Projeto

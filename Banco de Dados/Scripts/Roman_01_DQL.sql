@@ -14,8 +14,10 @@ FROM Usuario
 INNER JOIN TipoUsuario
 ON Usuario.IdTipoUsuario = TipoUsuario.IdTipoUsuario
 
-SELECT NomeProjeto,Descricao,NomeTema
+SELECT NomeProjeto,Descricao,NomeTema, Nome
 FROM Projeto
 INNER JOIN Tema
 ON Projeto.IdTema = Tema.IdTema
+INNER JOIN Usuario
+ON Projeto.IdUsuario = Usuario.IdUsuario
 
