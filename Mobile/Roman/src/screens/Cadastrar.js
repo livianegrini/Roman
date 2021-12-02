@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     Text,
-    Picker,
     TouchableOpacity,
     View,
     Image,
@@ -112,6 +111,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         width: 346,
-        height: 69
+        height: 69  
     }
 })

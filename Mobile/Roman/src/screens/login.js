@@ -29,11 +29,11 @@ export default class Login extends Component{
 
         const token = resposta.data.token;
         await AsyncStorage.setItem('user-token', token);
-        console.warn(token)
-        console.warn(this.state.Email, this.state.Senha)
+        // console.warn(token)
+        // console.warn(this.state.Email, this.state.Senha)
     
         if (resposta.status === 200) {
-          this.props.navigation.navigate('ListarProjetos');
+          this.props.navigation.navigate('Main');
         }
       };
 

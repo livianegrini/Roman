@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\46755453862\\Desktop\\Roman\\Back-End\\Senai_Roman_webApi\\Senai_Roman_webApi\\Senai_Roman_webApi\\Senai_Roman_webApi.csproj": {}
+    "C:\\Users\\47073656808\\Desktop\\Roman\\Back-End\\Senai_Roman_webApi\\Senai_Roman_webApi\\Senai_Roman_webApi\\Senai_Roman_webApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\46755453862\\Desktop\\Roman\\Back-End\\Senai_Roman_webApi\\Senai_Roman_webApi\\Senai_Roman_webApi\\Senai_Roman_webApi.csproj": {
+    "C:\\Users\\47073656808\\Desktop\\Roman\\Back-End\\Senai_Roman_webApi\\Senai_Roman_webApi\\Senai_Roman_webApi\\Senai_Roman_webApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\46755453862\\Desktop\\Roman\\Back-End\\Senai_Roman_webApi\\Senai_Roman_webApi\\Senai_Roman_webApi\\Senai_Roman_webApi.csproj",
+        "projectUniqueName": "C:\\Users\\47073656808\\Desktop\\Roman\\Back-End\\Senai_Roman_webApi\\Senai_Roman_webApi\\Senai_Roman_webApi\\Senai_Roman_webApi.csproj",
         "projectName": "Senai_Roman_webApi",
-        "projectPath": "C:\\Users\\46755453862\\Desktop\\Roman\\Back-End\\Senai_Roman_webApi\\Senai_Roman_webApi\\Senai_Roman_webApi\\Senai_Roman_webApi.csproj",
-        "packagesPath": "C:\\Users\\46755453862\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\46755453862\\Desktop\\Roman\\Back-End\\Senai_Roman_webApi\\Senai_Roman_webApi\\Senai_Roman_webApi\\obj\\",
+        "projectPath": "C:\\Users\\47073656808\\Desktop\\Roman\\Back-End\\Senai_Roman_webApi\\Senai_Roman_webApi\\Senai_Roman_webApi\\Senai_Roman_webApi.csproj",
+        "packagesPath": "C:\\Users\\47073656808\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\47073656808\\Desktop\\Roman\\Back-End\\Senai_Roman_webApi\\Senai_Roman_webApi\\Senai_Roman_webApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\46755453862\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\47073656808\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

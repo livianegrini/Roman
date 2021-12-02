@@ -58,9 +58,10 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import {StatusBar, StyleSheet} from 'react-native';
 
-// import Main from './src/screens/Main';
+
 import Cadastrar from './src/screens/Cadastrar';
 import Login from './src/screens/login';
+import Main from './src/screens/main';
 import ListarProjetos from './src/screens/listarprojetos';
 //import CameraPerfil from './src/screens/camera';
 
@@ -78,8 +79,9 @@ class App extends Component {
             headerShown: false,
           }}>
           <AuthStack.Screen name="Login" component={Login} />
+          <AuthStack.Screen name="Cadastrar" component={Cadastrar} />
           <AuthStack.Screen name="ListarProjetos" component={ListarProjetos} />
-          {/* <AuthStack.Screen name="Main" component={Main} /> */}
+          <AuthStack.Screen name="Main" component={Main} /> 
           {/* <AuthStack.Screen name="Camera" component={CameraPerfil} /> */}
         </AuthStack.Navigator>
       </NavigationContainer>

@@ -33,8 +33,8 @@ export default class Projetos extends Component {
                 const DadosApi = Resposta.data;
 
                 // Atualiza o state listaEventos com este corpo da requisição.
-                console.warn("eeeeeeeee")
-                console.warn(Resposta.data)
+                // console.warn("eeeeeeeee")
+                // console.warn(Resposta.data)
                 this.setState({ ListaProjetos: DadosApi });
             }
 
