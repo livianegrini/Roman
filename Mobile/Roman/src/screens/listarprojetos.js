@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 import api from '../services/api'
 
 export default class Projetos extends Component {
@@ -20,7 +20,7 @@ export default class Projetos extends Component {
 
             // Definindo uma constante pra receber a resposta da requisição.
             const Resposta = await api.get('/Projetos', {
-                Headers: {
+                headers: {
                     Authorization: 'Bearer ' + Token
                 }
             });
@@ -33,6 +33,8 @@ export default class Projetos extends Component {
                 const DadosApi = Resposta.data;
 
                 // Atualiza o state listaEventos com este corpo da requisição.
+                console.warn("eeeeeeeee")
+                console.warn(Resposta.data)
                 this.setState({ ListaProjetos: DadosApi });
             }
 
@@ -53,36 +55,49 @@ export default class Projetos extends Component {
 
             <View style={styles.Fundo}>
                 <View style={styles.Container}>
+
                     <View style={styles.Box_tiutlo}>
                         <Text style={styles.Titulo}>
                             {'Projetos'.toUpperCase()}
                         </Text>
                     </View>
 
-                    <View style={styles.ListarDiv}>
-                        <View style={styles.Box_Projeto}>
-                            <Text style={styles.ListagemNome}>
-                                {'Nome do Projeto'.toUpperCase()}
-                            </Text>
-                        </View>
-
-
-                        <Text style={styles.ListagemTema}>
-                            {'Tema do Projeto'.toUpperCase()}
-                        </Text>
-                        <Text style={styles.ListagemDescricao}>
-                            {'Descrição:'.toUpperCase()}
-                        </Text>
-                        <Text style={styles.ListagemExemplo}>
-                            {'Exemplo'.toUpperCase()}
-                        </Text>
-
-                    </View>
+                    <FlatList
+                        data={this.state.ListaProjetos}
+                        keyExtractor={item => item.idProjeto}
+                        renderItem={this.renderItem}
+                    />
                 </View>
             </View>
 
         );
     }
+
+    renderItem = ({ item }) => (
+        // console.warn(item)
+        <View>
+
+
+
+            <View style={styles.ListarDiv}>
+                <View style={styles.Box_Projeto}>
+                    <Text style={styles.ListagemNome}>
+                        {item.nomeProjeto.toUpperCase()}
+                    </Text>
+                </View>
+
+                <Text style={styles.ListagemTema}>
+                    {'Tema: ' + item.idTemaNavigation.nomeTema}
+                </Text>
+                
+                <Text style={styles.ListagemDescricao}>
+                    {'Descrição: ' + item.descricao}
+                </Text>
+                
+            </View>
+        </View>
+    );
+
 }
 
 const styles = StyleSheet.create({
@@ -134,7 +149,7 @@ const styles = StyleSheet.create({
     ListagemTema: {
         color: 'black',
         fontWeight: 'bold',
-        fontSize: 18,
+        fontSize: 20,
         marginLeft: 8,
         marginTop: 8
     },
@@ -142,9 +157,10 @@ const styles = StyleSheet.create({
     ListagemDescricao: {
         color: 'black',
         fontWeight: 'bold',
-        fontSize: 14,
+        fontSize: 18,
         marginLeft: 8,
-        marginTop: 18
+        marginTop: 18,
+        marginBottom: 10
     },
 
     ListagemExemplo: {

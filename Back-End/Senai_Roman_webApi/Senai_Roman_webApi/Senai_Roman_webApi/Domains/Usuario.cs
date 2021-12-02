@@ -7,6 +7,11 @@ namespace Senai_Roman_webApi.Domains
 {
     public partial class Usuario
     {
+        public Usuario()
+        {
+            Projetos = new HashSet<Projeto>();
+        }
+
         public int IdUsuario { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
@@ -16,5 +21,6 @@ namespace Senai_Roman_webApi.Domains
 
         public virtual Equipe IdEquipeNavigation { get; set; }
         public virtual TipoUsuario IdTipoUsuarioNavigation { get; set; }
+        public virtual ICollection<Projeto> Projetos { get; set; }
     }
 }

@@ -28,10 +28,8 @@ namespace Senai_Roman_webApi.Contexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-                // optionsBuilder.UseSqlServer("Data Source=NOTE0113F1\\SQLEXPRESS; initial catalog=Roman; user Id=sa; pwd=Senai@132;");
-                //optionsBuilder.UseSqlServer("Data Source=NOTE0113F4\\SQLEXPRESS; initial catalog=Roman; user Id=sa; pwd=Senai@132;");
-                optionsBuilder.UseSqlServer("Data Source=NOTE0113F4\\SQLEXPRESS; initial catalog=Roman; integrated security=true");
-
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("Data Source=NOTE0113F4\\SQLEXPRESS; Initial Catalog=Roman; integrated security=true");
             }
         }
 
@@ -42,11 +40,11 @@ namespace Senai_Roman_webApi.Contexts
             modelBuilder.Entity<Equipe>(entity =>
             {
                 entity.HasKey(e => e.IdEquipe)
-                    .HasName("PK__Equipe__D805241236429E23");
+                    .HasName("PK__Equipe__D80524127568308D");
 
                 entity.ToTable("Equipe");
 
-                entity.HasIndex(e => e.NomeEquipe, "UQ__Equipe__55A6F17FAD69C824")
+                entity.HasIndex(e => e.NomeEquipe, "UQ__Equipe__55A6F17FCFC669C9")
                     .IsUnique();
 
                 entity.Property(e => e.NomeEquipe)
@@ -58,7 +56,7 @@ namespace Senai_Roman_webApi.Contexts
             modelBuilder.Entity<Projeto>(entity =>
             {
                 entity.HasKey(e => e.IdProjeto)
-                    .HasName("PK__Projeto__B9E1BB5CF689CDE6");
+                    .HasName("PK__Projeto__B9E1BB5C83E02597");
 
                 entity.ToTable("Projeto");
 
@@ -74,17 +72,22 @@ namespace Senai_Roman_webApi.Contexts
                 entity.HasOne(d => d.IdTemaNavigation)
                     .WithMany(p => p.Projetos)
                     .HasForeignKey(d => d.IdTema)
-                    .HasConstraintName("FK__Projeto__IdTema__45F365D3");
+                    .HasConstraintName("FK__Projeto__IdTema__46E78A0C");
+
+                entity.HasOne(d => d.IdUsuarioNavigation)
+                    .WithMany(p => p.Projetos)
+                    .HasForeignKey(d => d.IdUsuario)
+                    .HasConstraintName("FK__Projeto__IdUsuar__45F365D3");
             });
 
             modelBuilder.Entity<Tema>(entity =>
             {
                 entity.HasKey(e => e.IdTema)
-                    .HasName("PK__Tema__9F3A4117C8DAD0A0");
+                    .HasName("PK__Tema__9F3A41176BD8088A");
 
                 entity.ToTable("Tema");
 
-                entity.HasIndex(e => e.NomeTema, "UQ__Tema__795998E22DD20C23")
+                entity.HasIndex(e => e.NomeTema, "UQ__Tema__795998E274B4CBAA")
                     .IsUnique();
 
                 entity.Property(e => e.NomeTema)
@@ -98,11 +101,11 @@ namespace Senai_Roman_webApi.Contexts
             modelBuilder.Entity<TipoUsuario>(entity =>
             {
                 entity.HasKey(e => e.IdTipoUsuario)
-                    .HasName("PK__TipoUsua__CA04062BCDC7F5A4");
+                    .HasName("PK__TipoUsua__CA04062BCF55F938");
 
                 entity.ToTable("TipoUsuario");
 
-                entity.HasIndex(e => e.TipoUsuario1, "UQ__TipoUsua__52F7E3AAE8EACDAF")
+                entity.HasIndex(e => e.TipoUsuario1, "UQ__TipoUsua__52F7E3AA97F77206")
                     .IsUnique();
 
                 entity.Property(e => e.TipoUsuario1)
@@ -115,11 +118,11 @@ namespace Senai_Roman_webApi.Contexts
             modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.HasKey(e => e.IdUsuario)
-                    .HasName("PK__Usuario__5B65BF9712E04E27");
+                    .HasName("PK__Usuario__5B65BF97ACDEAE4D");
 
                 entity.ToTable("Usuario");
 
-                entity.HasIndex(e => e.Email, "UQ__Usuario__A9D10534E2CA188E")
+                entity.HasIndex(e => e.Email, "UQ__Usuario__A9D1053435BFEB55")
                     .IsUnique();
 
                 entity.Property(e => e.Email)
